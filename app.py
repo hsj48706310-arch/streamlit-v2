@@ -10,3 +10,23 @@ st.write("스트림릿 배포해보기 - 홍서지")
 
 st.markdown("**징글징글하다 징글징글한 뻔뻔하다 뻔뻔한**")
 st.markdown("*울퉁불퉁하다 울퉁불퉁한*")
+
+# 페이지 등록
+# st.page("파일경로", title='메뉴이름', icon='아이콘')
+# 1. 홈 화면
+home = st.Page("pages/home.py", title="홈")
+# 2. 센서 화면
+sensors = st.Page("pages/sensors.py", title="센서 현황")
+# 3. 전력 화면
+power = st.Page("pages/power.py", title="전력현황")
+
+# 네비게이션 구성 ex)사이드바
+pg = st.navigation({
+    "메인" : [home],
+    "분석" : [sensors, power]
+    })
+
+st.sidebar.write("같은 사이드바 형태입니다")
+
+# 선텍된 페이지 실행
+pg.run()
