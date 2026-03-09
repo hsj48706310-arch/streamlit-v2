@@ -7,3 +7,5 @@ st.set_page_config(
 
 st.header("스트림릿 배포 테스트중")
 st.write("스트림릿 배포해보기 - 홍서지")
+
+st.markdown("**징글징글하다 징글징글한 뻔뻔하다 뻔뻔한**")
